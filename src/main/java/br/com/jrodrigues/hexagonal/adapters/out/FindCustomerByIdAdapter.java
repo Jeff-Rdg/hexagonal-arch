@@ -1,6 +1,5 @@
 package br.com.jrodrigues.hexagonal.adapters.out;
 
-import br.com.jrodrigues.hexagonal.adapters.in.controller.mapper.CustomerMapper;
 import br.com.jrodrigues.hexagonal.adapters.out.repository.CustomerRepository;
 import br.com.jrodrigues.hexagonal.adapters.out.repository.mapper.CustomerEntityMapper;
 import br.com.jrodrigues.hexagonal.application.core.domain.Customer;
