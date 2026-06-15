@@ -39,7 +39,9 @@ public class CustomerController {
 
         var customer = customerMapper.toCustomer(customerRequest);
 
-        insertCustomerInputPort.execute(customer, customerRequest.getZipCode());
+        insertCustomerInputPort.execute(customer,
+                customerRequest.getZipCode(),
+                customerRequest.getAddressNumber());
 
         return ResponseEntity.ok().build();
     }
@@ -57,7 +59,9 @@ public class CustomerController {
         var customer = customerMapper.toCustomer(customerRequest);
         customer.setId(id);
 
-        updateCustomerInputPort.execute(customer, customerRequest.getZipCode());
+        updateCustomerInputPort.execute(customer,
+                customerRequest.getZipCode(),
+                customerRequest.getAddressNumber());
 
         return ResponseEntity.noContent().build();
     }

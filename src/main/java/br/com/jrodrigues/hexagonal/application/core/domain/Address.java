@@ -8,9 +8,9 @@ public class Address {
 
     private String state;
 
-    private String number;
+    private Long number;
 
-    public Address(String street, String city, String state, String number) {
+    public Address(String street, String city, String state, Long number) {
         this.street = street;
         this.city = city;
         this.state = state;
@@ -45,11 +45,11 @@ public class Address {
         this.state = state;
     }
 
-    public String getNumber() {
+    public Long getNumber() {
         return number;
     }
 
-    public void setNumber(String number) {
+    public void setNumber(Long number) {
         this.number = number;
     }
 }

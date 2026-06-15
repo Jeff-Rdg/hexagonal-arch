@@ -10,6 +10,6 @@ public class AddressResponse {
 
     private String state;
 
-    private String number;
+    private Long number;
 
 }

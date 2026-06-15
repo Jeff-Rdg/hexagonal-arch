@@ -22,8 +22,10 @@ public class InsertCustomerUseCase implements InsertCustomerInputPort {
     }
 
     @Override
-    public void execute(Customer customer, String zipcode) {
+    public void execute(Customer customer, String zipcode, Long houseNumber) {
         var address = findAddressByZipCodeOutputPort.find(zipcode);
+        address.setNumber(houseNumber);
+
         customer.setAddress(address);
 
         insertCustomerOutputPort.execute(customer);
